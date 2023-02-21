@@ -1,0 +1,493 @@
+{
+	"info": {
+		"_postman_id": "10f0ccaa-770a-4ef5-b156-7d55deff76c9",
+		"name": "EmpleadoDepartamentoKtor_Opcional",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25935391"
+	},
+	"item": [
+		{
+			"name": "Departamentos",
+			"item": [
+				{
+					"name": "Obtener listado de departamentos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6969/api/departamentos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"departamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar departamento por id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:6969/api/departamentos/1d89e51a-af79-11ed-afa1-0242ac120002",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"departamentos",
+								"1d89e51a-af79-11ed-afa1-0242ac120002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear departamento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"BBDD\",\r\n  \"presupuesto\": 1000.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6969/api/departamentos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"departamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar departamento por id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Administracion2023\",\r\n  \"presupuesto\": 1000.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6969/api/departamentos/2fa8d67a-af79-11ed-afa1-0242ac120002",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"departamentos",
+								"2fa8d67a-af79-11ed-afa1-0242ac120002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar departamento por id ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJqd3QtYXVkaWVuY2UiLCJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImV4cCI6MTY3Njg0NDMxMiwidXNlcklkIjoiNDM2ZDA3MTUtN2FmZC00NDUyLWE2NDUtYWQ1MTY4ZGY3ZjcwIiwidXNlcm5hbWUiOiJNYXJpbzExMSJ9.JIznxjlvctOf-ryEe0wD_IbqgdkaTe05t_zL4BeOR68APMd0eMw6rS-QebejKx78uZ9uSrdafSYog4i09fyOXA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6969/api/departamentos/36a508e0-af79-11ed-afa1-0242ac120002",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"departamentos",
+								"36a508e0-af79-11ed-afa1-0242ac120002"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Crud básico de departamentos"
+		},
+		{
+			"name": "Empleados",
+			"item": [
+				{
+					"name": "Obtener listado de empleados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6969/api/empleados",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"empleados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar empleado por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6969/api/empleados/db7fbce4-b095-11ed-afa1-0242ac120002",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"empleados",
+								"db7fbce4-b095-11ed-afa1-0242ac120002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear empleado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Atreus2\",\r\n  \"email\": \"atreus@gmail.com\",\r\n  \"departamentoId\": null,\r\n  \"avatar\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:6969/api/empleados",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"empleados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar empleado",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"MarioResa\",\r\n    \"email\": \"mario@gmail.com\",\r\n    \"departamentoId\": \"1d89e51a-af79-11ed-afa1-0242ac120002\",\r\n    \"avatar\": \"https://cdn-icons-png.flaticon.com/512/2550/2550260.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6969/api/empleados/db7fbce4-b095-11ed-afa1-0242ac120002",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"empleados",
+								"db7fbce4-b095-11ed-afa1-0242ac120002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar avatar empleado",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "file",
+							"file": {
+								"src": "/C:/Users/Mario/Downloads/avatar.png"
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6969/api/empleados/avatar/db7fbce4-b095-11ed-afa1-0242ac120002",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"empleados",
+								"avatar",
+								"db7fbce4-b095-11ed-afa1-0242ac120002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar empleado",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6969/api/empleados/8f26fa30-b09d-11ed-afa1-0242ac120002",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"empleados",
+								"8f26fa30-b09d-11ed-afa1-0242ac120002"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Crud básico de empleados"
+		},
+		{
+			"name": "Storage",
+			"item": [
+				{
+					"name": "Subida de un archivo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "file",
+							"file": {
+								"src": "/C:/Users/Mario/Downloads/avatar.png"
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6969/api/storage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"storage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Búsqueda de un archivo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6969/api/storage/eca11015-a971-4864-9989-e37e6746f500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"storage",
+								"eca11015-a971-4864-9989-e37e6746f500"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Operaciones de almacenamiento básicas"
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"Mario111\",\r\n  \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6969/api/usuarios/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"usuarios",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"Mario9999\",\r\n  \"password\": \"12345\",\r\n  \"role\": \"USER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6969/api/usuarios/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"usuarios",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener listado de usuarios",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJqd3QtYXVkaWVuY2UiLCJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImV4cCI6MTY3Njg0NDMxMiwidXNlcklkIjoiNDM2ZDA3MTUtN2FmZC00NDUyLWE2NDUtYWQ1MTY4ZGY3ZjcwIiwidXNlcm5hbWUiOiJNYXJpbzExMSJ9.JIznxjlvctOf-ryEe0wD_IbqgdkaTe05t_zL4BeOR68APMd0eMw6rS-QebejKx78uZ9uSrdafSYog4i09fyOXA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6969/api/usuarios/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"usuarios",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MyData [me]",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJqd3QtYXVkaWVuY2UiLCJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImV4cCI6MTY3Njg0NDMxMiwidXNlcklkIjoiNDM2ZDA3MTUtN2FmZC00NDUyLWE2NDUtYWQ1MTY4ZGY3ZjcwIiwidXNlcm5hbWUiOiJNYXJpbzExMSJ9.JIznxjlvctOf-ryEe0wD_IbqgdkaTe05t_zL4BeOR68APMd0eMw6rS-QebejKx78uZ9uSrdafSYog4i09fyOXA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6969/api/usuarios/me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"usuarios",
+								"me"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Operaciones básicas de los usuarios"
+		}
+	]
+}
