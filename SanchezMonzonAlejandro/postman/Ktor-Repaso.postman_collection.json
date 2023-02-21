@@ -1,0 +1,526 @@
+{
+	"info": {
+		"_postman_id": "f846773f-0706-4dd3-9c45-6414ed4774e1",
+		"name": "Ktor-Repaso",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25247215"
+	},
+	"item": [
+		{
+			"name": "https://localhost:6969/api/usuarios/register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJqd3QtYXVkaWVuY2UiLCJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImV4cCI6MTY3NzAwNzYxNiwidXNlcklkIjoiOWM0OTljMTctOWI3NC00ZDRlLTgwZjItOGYxNzcyOTI5NDY4IiwidXNlcm5hbWUiOiJwZXBlIn0.Yo409sceGXi8OJSlsaDx028hCnPd3EB_6q6xjQMlvR18rPmew_b2BrZZr_kPqzUYy8HFBBTFgNPquLmORluXhA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"pepe\",\r\n    \"password\": \"pepe1234\",\r\n    \"role\": \"ADMIN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/api/usuarios/register",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"usuarios",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:6969/api/usuarios/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"pepe\",\r\n    \"password\": \"pepe1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/api/usuarios/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"usuarios",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:6969/api/usuarios/me",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJqd3QtYXVkaWVuY2UiLCJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImV4cCI6MTY3NzAxNjU2MCwidXNlcklkIjoiYjI5MDZkNTEtZTBjOS00NjBkLTg4OGEtOWZlNGVkNWQ0OTc4IiwidXNlcm5hbWUiOiJwZXBlIn0.oRpblp7FRdvcYWe0OmhEViMyB6sFI2m27PoMpwJTXQEq-GQGxI1h0y381enGmVTsd_fPsDpRrqJ3VrNcH9PmGw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:6969/api/usuarios/me",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"usuarios",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:6969/api/usuarios/list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJqd3QtYXVkaWVuY2UiLCJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImV4cCI6MTY3NzAxNjU2MCwidXNlcklkIjoiYjI5MDZkNTEtZTBjOS00NjBkLTg4OGEtOWZlNGVkNWQ0OTc4IiwidXNlcm5hbWUiOiJwZXBlIn0.oRpblp7FRdvcYWe0OmhEViMyB6sFI2m27PoMpwJTXQEq-GQGxI1h0y381enGmVTsd_fPsDpRrqJ3VrNcH9PmGw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:6969/api/usuarios/list",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"usuarios",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:6969/api/departamentos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJqd3QtYXVkaWVuY2UiLCJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImV4cCI6MTY3NzAxNjU2MCwidXNlcklkIjoiYjI5MDZkNTEtZTBjOS00NjBkLTg4OGEtOWZlNGVkNWQ0OTc4IiwidXNlcm5hbWUiOiJwZXBlIn0.oRpblp7FRdvcYWe0OmhEViMyB6sFI2m27PoMpwJTXQEq-GQGxI1h0y381enGmVTsd_fPsDpRrqJ3VrNcH9PmGw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:6969/api/departamentos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"departamentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:6969/api/departamentos/2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJqd3QtYXVkaWVuY2UiLCJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImV4cCI6MTY3NzAxNjU2MCwidXNlcklkIjoiYjI5MDZkNTEtZTBjOS00NjBkLTg4OGEtOWZlNGVkNWQ0OTc4IiwidXNlcm5hbWUiOiJwZXBlIn0.oRpblp7FRdvcYWe0OmhEViMyB6sFI2m27PoMpwJTXQEq-GQGxI1h0y381enGmVTsd_fPsDpRrqJ3VrNcH9PmGw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:6969/api/departamentos/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"departamentos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:6969/api/departamentos/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJqd3QtYXVkaWVuY2UiLCJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImV4cCI6MTY3NzAxNjU2MCwidXNlcklkIjoiYjI5MDZkNTEtZTBjOS00NjBkLTg4OGEtOWZlNGVkNWQ0OTc4IiwidXNlcm5hbWUiOiJwZXBlIn0.oRpblp7FRdvcYWe0OmhEViMyB6sFI2m27PoMpwJTXQEq-GQGxI1h0y381enGmVTsd_fPsDpRrqJ3VrNcH9PmGw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 3,\r\n    \"nombre\": \"Prueba\",\r\n    \"presupuesto\": 800.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/api/departamentos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"departamentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:6969/api/departamentos/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJqd3QtYXVkaWVuY2UiLCJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImV4cCI6MTY3NzAxNjU2MCwidXNlcklkIjoiYjI5MDZkNTEtZTBjOS00NjBkLTg4OGEtOWZlNGVkNWQ0OTc4IiwidXNlcm5hbWUiOiJwZXBlIn0.oRpblp7FRdvcYWe0OmhEViMyB6sFI2m27PoMpwJTXQEq-GQGxI1h0y381enGmVTsd_fPsDpRrqJ3VrNcH9PmGw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 3,\r\n    \"nombre\": \"Prueba\",\r\n    \"presupuesto\": 850.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/api/departamentos/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"departamentos",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:6969/api/departamentos/3",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJqd3QtYXVkaWVuY2UiLCJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImV4cCI6MTY3NzAxNjU2MCwidXNlcklkIjoiYjI5MDZkNTEtZTBjOS00NjBkLTg4OGEtOWZlNGVkNWQ0OTc4IiwidXNlcm5hbWUiOiJwZXBlIn0.oRpblp7FRdvcYWe0OmhEViMyB6sFI2m27PoMpwJTXQEq-GQGxI1h0y381enGmVTsd_fPsDpRrqJ3VrNcH9PmGw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 3,\r\n    \"nombre\": \"Prueba\",\r\n    \"presupuesto\": 850.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/api/departamentos/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"departamentos",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:6969/api/empleados",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJqd3QtYXVkaWVuY2UiLCJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImV4cCI6MTY3NzAxNjU2MCwidXNlcklkIjoiYjI5MDZkNTEtZTBjOS00NjBkLTg4OGEtOWZlNGVkNWQ0OTc4IiwidXNlcm5hbWUiOiJwZXBlIn0.oRpblp7FRdvcYWe0OmhEViMyB6sFI2m27PoMpwJTXQEq-GQGxI1h0y381enGmVTsd_fPsDpRrqJ3VrNcH9PmGw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 3,\r\n    \"nombre\": \"Prueba\",\r\n    \"presupuesto\": 850.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/api/empleados",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"empleados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:6969/api/empleados/2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJqd3QtYXVkaWVuY2UiLCJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImV4cCI6MTY3NzAxNjU2MCwidXNlcklkIjoiYjI5MDZkNTEtZTBjOS00NjBkLTg4OGEtOWZlNGVkNWQ0OTc4IiwidXNlcm5hbWUiOiJwZXBlIn0.oRpblp7FRdvcYWe0OmhEViMyB6sFI2m27PoMpwJTXQEq-GQGxI1h0y381enGmVTsd_fPsDpRrqJ3VrNcH9PmGw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 3,\r\n    \"nombre\": \"Prueba\",\r\n    \"presupuesto\": 850.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/api/empleados/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"empleados",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:6969/api/empleados",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJqd3QtYXVkaWVuY2UiLCJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImV4cCI6MTY3NzAxNjU2MCwidXNlcklkIjoiYjI5MDZkNTEtZTBjOS00NjBkLTg4OGEtOWZlNGVkNWQ0OTc4IiwidXNlcm5hbWUiOiJwZXBlIn0.oRpblp7FRdvcYWe0OmhEViMyB6sFI2m27PoMpwJTXQEq-GQGxI1h0y381enGmVTsd_fPsDpRrqJ3VrNcH9PmGw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 3,\r\n    \"nombre\": \"Prueba\",\r\n    \"email\": \"prueba@correo.com\",\r\n    \"avatar\": \"https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o=\",\r\n    \"departamento\": \r\n    {\r\n        \"id\": \"2\",\r\n        \"nombre\": \"Atención al cliente\",\r\n        \"presupuesto\": 9041.0\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/api/empleados",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"empleados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:6969/api/empleados/3",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJqd3QtYXVkaWVuY2UiLCJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImV4cCI6MTY3NzAxNjU2MCwidXNlcklkIjoiYjI5MDZkNTEtZTBjOS00NjBkLTg4OGEtOWZlNGVkNWQ0OTc4IiwidXNlcm5hbWUiOiJwZXBlIn0.oRpblp7FRdvcYWe0OmhEViMyB6sFI2m27PoMpwJTXQEq-GQGxI1h0y381enGmVTsd_fPsDpRrqJ3VrNcH9PmGw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 3,\r\n    \"nombre\": \"Prueba\",\r\n    \"email\": \"prueba@correo.es\",\r\n    \"avatar\": \"https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o=\",\r\n    \"departamento\": \r\n    {\r\n        \"id\": \"2\",\r\n        \"nombre\": \"Atención al cliente\",\r\n        \"presupuesto\": 9041.0\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/api/empleados/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"empleados",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:6969/api/empleados/3",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJqd3QtYXVkaWVuY2UiLCJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImV4cCI6MTY3NzAxNjU2MCwidXNlcklkIjoiYjI5MDZkNTEtZTBjOS00NjBkLTg4OGEtOWZlNGVkNWQ0OTc4IiwidXNlcm5hbWUiOiJwZXBlIn0.oRpblp7FRdvcYWe0OmhEViMyB6sFI2m27PoMpwJTXQEq-GQGxI1h0y381enGmVTsd_fPsDpRrqJ3VrNcH9PmGw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 3,\r\n    \"nombre\": \"Prueba\",\r\n    \"email\": \"prueba@correo.es\",\r\n    \"avatar\": \"https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o=\",\r\n    \"departamento\": \r\n    {\r\n        \"id\": \"2\",\r\n        \"nombre\": \"Atención al cliente\",\r\n        \"presupuesto\": 9041.0\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/api/empleados/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"empleados",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
