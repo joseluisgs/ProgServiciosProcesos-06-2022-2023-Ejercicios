@@ -1,0 +1,284 @@
+{
+	"info": {
+		"_postman_id": "5dd2579e-017d-44cb-8b3e-bd86e7f9055c",
+		"name": "Empleado-Departamento",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25262839"
+	},
+	"item": [
+		{
+			"name": "FindAllEmpleados",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJqd3QtYXVkaWVuY2UiLCJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImV4cCI6MTY3NzA1NzA4OCwidXNlcklkIjoiYjVjMjU1YTgtMWQzYS00OWI1LThjOTAtY2UxNWJhYWQzNDkyIiwidXNlcm5hbWUiOiJpZGFuaXJmIn0._ozeqYsskPcGrvYgmPcayz5OQsf6IsVp-IAN_A5nPVI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Ruben\",\r\n    \"email\":\"rubemn@gmail.com\",\r\n    \"avatar\":\"https://cdn-icons-png.flaticon.com/512/5087/5087579.png\",\r\n    \"departamentoId\":\"e85fd3ed-175e-45f0-a765-7af1c52e26cc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/empleados",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"empleados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save-Empleados",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJqd3QtYXVkaWVuY2UiLCJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImV4cCI6MTY3NzA1NzA4OCwidXNlcklkIjoiYjVjMjU1YTgtMWQzYS00OWI1LThjOTAtY2UxNWJhYWQzNDkyIiwidXNlcm5hbWUiOiJpZGFuaXJmIn0._ozeqYsskPcGrvYgmPcayz5OQsf6IsVp-IAN_A5nPVI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Ruben\",\r\n    \"email\":\"rubemn@gmail.com\",\r\n    \"avatar\":\"https://cdn-icons-png.flaticon.com/512/5087/5087579.png\",\r\n    \"departamentoId\":\"e85fd3ed-175e-45f0-a765-7af1c52e26cc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/empleados",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"empleados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save-Departamento",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJqd3QtYXVkaWVuY2UiLCJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImV4cCI6MTY3NzA1NzA4OCwidXNlcklkIjoiYjVjMjU1YTgtMWQzYS00OWI1LThjOTAtY2UxNWJhYWQzNDkyIiwidXNlcm5hbWUiOiJpZGFuaXJmIn0._ozeqYsskPcGrvYgmPcayz5OQsf6IsVp-IAN_A5nPVI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombreDepartamento\":\"Investigación\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/departamentos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"departamentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindAllDepartamentos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJqd3QtYXVkaWVuY2UiLCJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImV4cCI6MTY3NzA1NzA4OCwidXNlcklkIjoiYjVjMjU1YTgtMWQzYS00OWI1LThjOTAtY2UxNWJhYWQzNDkyIiwidXNlcm5hbWUiOiJpZGFuaXJmIn0._ozeqYsskPcGrvYgmPcayz5OQsf6IsVp-IAN_A5nPVI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombreDepartamento\":\"Investigación\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/departamentos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"departamentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindAllUsers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJqd3QtYXVkaWVuY2UiLCJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImV4cCI6MTY3NzA1OTkwMiwidXNlcklkIjoiYWE2NWE0NGYtMWZlMS00NzE5LWE2ZTEtYzVkM2RmZWM2Zjk5IiwidXNlcm5hbWUiOiJpZGFuaXJmIn0.Q-Kry1vv8dBJ3_Ve7Ie5eTWhoP_-K-HgnNB8E9rFSMY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombreDepartamento\":\"Investigación\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindMe",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJqd3QtYXVkaWVuY2UiLCJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImV4cCI6MTY3NzA1OTkwMiwidXNlcklkIjoiYWE2NWE0NGYtMWZlMS00NzE5LWE2ZTEtYzVkM2RmZWM2Zjk5IiwidXNlcm5hbWUiOiJpZGFuaXJmIn0.Q-Kry1vv8dBJ3_Ve7Ie5eTWhoP_-K-HgnNB8E9rFSMY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"ruben\",\r\n    \"password\":\"987654\",\r\n    \"rol:\":\"USER\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users/my",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"my"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UserLogin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJqd3QtYXVkaWVuY2UiLCJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImV4cCI6MTY3NzA1OTc4NiwidXNlcklkIjoiYWE2NWE0NGYtMWZlMS00NzE5LWE2ZTEtYzVkM2RmZWM2Zjk5IiwidXNlcm5hbWUiOiJpZGFuaXJmIn0.xUarbXaF7CbZQtwIainl_hw7EaNKA5yj2wH_A9y7F-o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"idanirf\",\r\n    \"password\":\"654321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
