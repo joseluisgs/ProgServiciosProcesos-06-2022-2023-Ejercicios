@@ -1,0 +1,1 @@
+rootProject.name = "Departamento-rest-ktor"
