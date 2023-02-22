@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "36ead20f-2082-43ed-8f3f-e3ecd6643750",
+		"name": "ApiStorage",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25247177"
+	},
+	"item": [
+		{
+			"name": "PostStorage",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJlbXBsZWFkb3MtYXV0aCIsInN1YiI6IkF1dGhlbnRpY2F0aW9uIiwiaXNzIjoiRGFuaWVsIENhcm1vbmEiLCJleHAiOjE2NzY5NTM2MDksInJvbCI6IkFETUlOIiwidXNlcm5hbWUiOiJwZXBpdG8xMjMifQ.Q5WxWtQO-Q7SAm9vPruqwgbY8DcmHOc4Dj6tCBoJ0V748HBqg0vApgKZ3P7aN765KUfC0HKyOVwwuBPeajns3g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"type": "file",
+							"src": "/D:/Escritorio/Kassius/IMG-20201030-WA0030.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:6969/storage",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"storage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetFile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:6969/storage/236cb01b-c020-47c4-a687-814d50de78e9.jpg",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"storage",
+						"236cb01b-c020-47c4-a687-814d50de78e9.jpg"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

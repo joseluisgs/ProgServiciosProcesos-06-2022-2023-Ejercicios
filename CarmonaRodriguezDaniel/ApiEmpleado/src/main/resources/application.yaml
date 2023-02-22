@@ -1,0 +1,23 @@
+ktor:
+  application:
+    modules:
+      - com.example.ApplicationKt.module
+  deployment:
+    sslPort: 6969
+  security:
+    ssl:
+      keyStore: cert/server_keystore.p12
+      keyAlias: serverKeyPair
+      keyStorePassword: 1234567
+      privateKeyPassword: 1234567
+server:
+  baseSecureUrl: "https://localhost:6969"
+jwt:
+  audience: "empleados-auth"
+  realm: "ktor sample"
+  secret: "3sta€sL@ContraS€ñaD3Pru€b@"
+  issuer: "Daniel Carmona"
+  expiration: "3600"
+storage:
+  uploadDir: "uploads"
+  endpoint: "storage"

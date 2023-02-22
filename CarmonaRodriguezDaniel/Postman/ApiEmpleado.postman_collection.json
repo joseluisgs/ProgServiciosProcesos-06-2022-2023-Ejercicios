@@ -1,0 +1,508 @@
+{
+	"info": {
+		"_postman_id": "8ae8d9e8-05a5-47b9-9359-3d9c8105579d",
+		"name": "ApiEmpleado",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25247177"
+	},
+	"item": [
+		{
+			"name": "FindAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:6969/empleados",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"empleados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:6969/empleados/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"empleados",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindByIdNotFound",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:6969/empleados/-1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"empleados",
+						"-1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindByIdDepartamento",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:6969/empleados/1/departamento",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"empleados",
+						"1",
+						"departamento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindByIdBadRequest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:6969/empleados/a",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"empleados",
+						"a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJlbXBsZWFkb3MtYXV0aCIsInN1YiI6IkF1dGhlbnRpY2F0aW9uIiwiaXNzIjoiRGFuaWVsIENhcm1vbmEiLCJleHAiOjE2NzcwNDc3NzYsInJvbCI6IkFETUlOIiwidXNlcm5hbWUiOiJwZXBpdG8xMjMifQ.R7_zS76XHzufHztyQ1XrwPFiPUkeqNIvExmDjJ41qrDRGyZVeJlZeuS_ZO9MTRSj2qe-m1iDqMObfZx88mnHuQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"id\": 4,\r\n    \"name\": \"Pepe\",\r\n    \"departamento\": \"Desarrollo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/empleados",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"empleados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostNoExistDepartamento",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJlbXBsZWFkb3MtYXV0aCIsInN1YiI6IkF1dGhlbnRpY2F0aW9uIiwiaXNzIjoiRGFuaWVsIENhcm1vbmEiLCJleHAiOjE2NzcwNDc3NzYsInJvbCI6IkFETUlOIiwidXNlcm5hbWUiOiJwZXBpdG8xMjMifQ.R7_zS76XHzufHztyQ1XrwPFiPUkeqNIvExmDjJ41qrDRGyZVeJlZeuS_ZO9MTRSj2qe-m1iDqMObfZx88mnHuQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"id\": 4,\r\n    \"name\": \"Pepe\",\r\n    \"departamento\": \"COCINA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/empleados",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"empleados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostExist",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJlbXBsZWFkb3MtYXV0aCIsInN1YiI6IkF1dGhlbnRpY2F0aW9uIiwiaXNzIjoiRGFuaWVsIENhcm1vbmEiLCJleHAiOjE2NzY5NTM2MDksInJvbCI6IkFETUlOIiwidXNlcm5hbWUiOiJwZXBpdG8xMjMifQ.Q5WxWtQO-Q7SAm9vPruqwgbY8DcmHOc4Dj6tCBoJ0V748HBqg0vApgKZ3P7aN765KUfC0HKyOVwwuBPeajns3g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"Pepe\",\r\n    \"departamento\": \"Desarrollo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/empleados",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"empleados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostValidation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJlbXBsZWFkb3MtYXV0aCIsInN1YiI6IkF1dGhlbnRpY2F0aW9uIiwiaXNzIjoiRGFuaWVsIENhcm1vbmEiLCJleHAiOjE2NzY5NTM2MDksInJvbCI6IkFETUlOIiwidXNlcm5hbWUiOiJwZXBpdG8xMjMifQ.Q5WxWtQO-Q7SAm9vPruqwgbY8DcmHOc4Dj6tCBoJ0V748HBqg0vApgKZ3P7aN765KUfC0HKyOVwwuBPeajns3g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"id\": 4,\r\n    \"name\": \"\",\r\n    \"departamento\": \"Desarrollo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/empleados",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"empleados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJlbXBsZWFkb3MtYXV0aCIsInN1YiI6IkF1dGhlbnRpY2F0aW9uIiwiaXNzIjoiRGFuaWVsIENhcm1vbmEiLCJleHAiOjE2NzY5NTM2MDksInJvbCI6IkFETUlOIiwidXNlcm5hbWUiOiJwZXBpdG8xMjMifQ.Q5WxWtQO-Q7SAm9vPruqwgbY8DcmHOc4Dj6tCBoJ0V748HBqg0vApgKZ3P7aN765KUfC0HKyOVwwuBPeajns3g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:6969/empleados/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"empleados",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteNotFound",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJlbXBsZWFkb3MtYXV0aCIsInN1YiI6IkF1dGhlbnRpY2F0aW9uIiwiaXNzIjoiRGFuaWVsIENhcm1vbmEiLCJleHAiOjE2NzY5NTM2MDksInJvbCI6IkFETUlOIiwidXNlcm5hbWUiOiJwZXBpdG8xMjMifQ.Q5WxWtQO-Q7SAm9vPruqwgbY8DcmHOc4Dj6tCBoJ0V748HBqg0vApgKZ3P7aN765KUfC0HKyOVwwuBPeajns3g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:6969/empleados/-1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"empleados",
+						"-1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteBadRequest",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJlbXBsZWFkb3MtYXV0aCIsInN1YiI6IkF1dGhlbnRpY2F0aW9uIiwiaXNzIjoiRGFuaWVsIENhcm1vbmEiLCJleHAiOjE2NzY5NTM2MDksInJvbCI6IkFETUlOIiwidXNlcm5hbWUiOiJwZXBpdG8xMjMifQ.Q5WxWtQO-Q7SAm9vPruqwgbY8DcmHOc4Dj6tCBoJ0V748HBqg0vApgKZ3P7aN765KUfC0HKyOVwwuBPeajns3g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:6969/empleados/a",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"empleados",
+						"a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJlbXBsZWFkb3MtYXV0aCIsInN1YiI6IkF1dGhlbnRpY2F0aW9uIiwiaXNzIjoiRGFuaWVsIENhcm1vbmEiLCJleHAiOjE2NzY5NTM2MDksInJvbCI6IkFETUlOIiwidXNlcm5hbWUiOiJwZXBpdG8xMjMifQ.Q5WxWtQO-Q7SAm9vPruqwgbY8DcmHOc4Dj6tCBoJ0V748HBqg0vApgKZ3P7aN765KUfC0HKyOVwwuBPeajns3g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Prueba\",\r\n    \"available\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/empleados/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"empleados",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutNotFound",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJlbXBsZWFkb3MtYXV0aCIsInN1YiI6IkF1dGhlbnRpY2F0aW9uIiwiaXNzIjoiRGFuaWVsIENhcm1vbmEiLCJleHAiOjE2NzY5NTM2MDksInJvbCI6IkFETUlOIiwidXNlcm5hbWUiOiJwZXBpdG8xMjMifQ.Q5WxWtQO-Q7SAm9vPruqwgbY8DcmHOc4Dj6tCBoJ0V748HBqg0vApgKZ3P7aN765KUfC0HKyOVwwuBPeajns3g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Prueba\",\r\n    \"available\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/empleados/10",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"empleados",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutBadRequest",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJlbXBsZWFkb3MtYXV0aCIsInN1YiI6IkF1dGhlbnRpY2F0aW9uIiwiaXNzIjoiRGFuaWVsIENhcm1vbmEiLCJleHAiOjE2NzY5NTM2MDksInJvbCI6IkFETUlOIiwidXNlcm5hbWUiOiJwZXBpdG8xMjMifQ.Q5WxWtQO-Q7SAm9vPruqwgbY8DcmHOc4Dj6tCBoJ0V748HBqg0vApgKZ3P7aN765KUfC0HKyOVwwuBPeajns3g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Prueba\",\r\n    \"available\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/empleados/a",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"empleados",
+						"a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutValidation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJlbXBsZWFkb3MtYXV0aCIsInN1YiI6IkF1dGhlbnRpY2F0aW9uIiwiaXNzIjoiRGFuaWVsIENhcm1vbmEiLCJleHAiOjE2NzY5NTM2MDksInJvbCI6IkFETUlOIiwidXNlcm5hbWUiOiJwZXBpdG8xMjMifQ.Q5WxWtQO-Q7SAm9vPruqwgbY8DcmHOc4Dj6tCBoJ0V748HBqg0vApgKZ3P7aN765KUfC0HKyOVwwuBPeajns3g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"\",\r\n    \"available\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/empleados/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"empleados",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
