@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "216f21d8-6v1f-3f9d-23a5-567c63vbe3b0",
+		"name": "EmpleadoDepartamento",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32451351"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"Pepe111\",\r\n  \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6969/api/usuarios/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"Jorge123\",\r\n  \"password\": \"12345\",\r\n  \"role\": \"USER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6969/api/usuarios/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listado de Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJ0ZW5pc3Rhcy1rdG9yLWF1dGgiLCJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImlzcyI6InRlbmlzdGFzLWt0b3IiLCJ1c2VybWFpbCI6ImFuYUBsb3Blei5jb20iLCJleHAiOjE2NzQwNjIwMTgyNDAsInVzZXJJZCI6ImM1MzA2MmU0LTMxZWEtNGY1ZS1hOTlkLTM2YzIyOGVkMDFhMyIsInVzZXJuYW1lIjoiYW5hIn0.8oLHerfDdffHef5zNxPXrpJs1i3pAW1JOso0f_2OwKOAg17mE448pC_SJGm2Xlr-6GGqhnTuH8mCgc8AgFwS2w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6969/api/usuarios/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"users",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MyData [me]",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJ0ZW5pc3Rhcy1rdG9yLWF1dGgiLCJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImlzcyI6InRlbmlzdGFzLWt0b3IiLCJ1c2VybWFpbCI6ImFuYUBsb3Blei5jb20iLCJleHAiOjE2NzQwNjIwMTgyNDAsInVzZXJJZCI6ImM1MzA2MmU0LTMxZWEtNGY1ZS1hOTlkLTM2YzIyOGVkMDFhMyIsInVzZXJuYW1lIjoiYW5hIn0.8oLHerfDdffHef5zNxPXrpJs1i3pAW1JOso0f_2OwKOAg17mE448pC_SJGm2Xlr-6GGqhnTuH8mCgc8AgFwS2w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6969/api/usuarios/me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"userss",
+								"me"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Operaciones Users"
+		}
+	]
+}
