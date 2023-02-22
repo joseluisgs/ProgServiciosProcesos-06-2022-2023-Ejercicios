@@ -1,0 +1,505 @@
+{
+	"info": {
+		"_postman_id": "6e9f5ce0-5a1b-4583-91fc-8d660ff8ae17",
+		"name": "Ktor-empleados",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users/register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"correo\": \"prueba@prueba.com\",\r\n    \"usuario\": \"admin\",\r\n    \"password\": \"prueba\",\r\n    \"rol\": \"ADMIN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/users/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users/login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usuario\": \"admin\",\r\n    \"password\": \"prueba\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/me",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJlbXBsZWFkb3Mta3Rvci1hdXRoIiwic3ViIjoiQXV0aGVudGljYXRpb24iLCJpc3MiOiJlbXBsZWFkby1rdG9yIiwiZXhwIjoxNjc3MDE3MjEwLCJ1c2VySWQiOiI1NmMzNDRhYy1iYjY0LTQwMmMtYjcwZi04YTY0ODMwZDQ4NjIiLCJlbWFpbCI6InBydWViYUBwcnVlYmEuY29tIiwidXNlcm5hbWUiOiJhZG1pbiJ9.O_B3fGr_gWYwv2ckxvPGm93WCuOTgEV2UA1IeV44Zey2eQMzYYpohLKM1UrqT7EMNli0fZD4nvllwY5XOz8Fhg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/users/me",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "departamento/save",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJlbXBsZWFkb3Mta3Rvci1hdXRoIiwic3ViIjoiQXV0aGVudGljYXRpb24iLCJpc3MiOiJlbXBsZWFkby1rdG9yIiwiZXhwIjoxNjc3MDE3MjEwLCJ1c2VySWQiOiI1NmMzNDRhYy1iYjY0LTQwMmMtYjcwZi04YTY0ODMwZDQ4NjIiLCJlbWFpbCI6InBydWViYUBwcnVlYmEuY29tIiwidXNlcm5hbWUiOiJhZG1pbiJ9.O_B3fGr_gWYwv2ckxvPGm93WCuOTgEV2UA1IeV44Zey2eQMzYYpohLKM1UrqT7EMNli0fZD4nvllwY5XOz8Fhg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Informatica\",\r\n    \"presupuesto\": 23\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/departamento/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"departamento",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "empleado/save",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJlbXBsZWFkb3Mta3Rvci1hdXRoIiwic3ViIjoiQXV0aGVudGljYXRpb24iLCJpc3MiOiJlbXBsZWFkby1rdG9yIiwiZXhwIjoxNjc3MDE4NjM3LCJ1c2VySWQiOiJjMzNlOTc1MC0yYTA4LTQwYTAtODI1NC05NDRhZDRjNzQ3MWQiLCJlbWFpbCI6InBydWViYUBwcnVlYmEuY29tIiwidXNlcm5hbWUiOiJhZG1pbiJ9.gBCWJEs-WsY6A9a4a2Kd5q-Gl9E1jTBhu16qHafou58xMW_wr-2T5LGY-XAgwLMtwZQSDGh2R8EEbtUAbgNnkw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\" : \"Mireya\",\r\n    \"email\" : \"mireya@gmail.com\",\r\n    \"avatar\" : \"xd\",\r\n    \"departamento\":\r\n        {\r\n            \"id\": \"08df3227-ee0c-441a-a1ea-ce84500f53a7\",\r\n            \"nombre\": \"Informatica\",\r\n            \"presupuesto\": 23\r\n        }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/empleado/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"empleado",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "departamento/findAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJlbXBsZWFkb3Mta3Rvci1hdXRoIiwic3ViIjoiQXV0aGVudGljYXRpb24iLCJpc3MiOiJlbXBsZWFkby1rdG9yIiwiZXhwIjoxNjc3MDE4NjM3LCJ1c2VySWQiOiJjMzNlOTc1MC0yYTA4LTQwYTAtODI1NC05NDRhZDRjNzQ3MWQiLCJlbWFpbCI6InBydWViYUBwcnVlYmEuY29tIiwidXNlcm5hbWUiOiJhZG1pbiJ9.gBCWJEs-WsY6A9a4a2Kd5q-Gl9E1jTBhu16qHafou58xMW_wr-2T5LGY-XAgwLMtwZQSDGh2R8EEbtUAbgNnkw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Informatica\",\r\n    \"presupuesto\": 23\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/departamento/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"departamento",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "empleado/findAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJlbXBsZWFkb3Mta3Rvci1hdXRoIiwic3ViIjoiQXV0aGVudGljYXRpb24iLCJpc3MiOiJlbXBsZWFkby1rdG9yIiwiZXhwIjoxNjc3MDE4NjM3LCJ1c2VySWQiOiJjMzNlOTc1MC0yYTA4LTQwYTAtODI1NC05NDRhZDRjNzQ3MWQiLCJlbWFpbCI6InBydWViYUBwcnVlYmEuY29tIiwidXNlcm5hbWUiOiJhZG1pbiJ9.gBCWJEs-WsY6A9a4a2Kd5q-Gl9E1jTBhu16qHafou58xMW_wr-2T5LGY-XAgwLMtwZQSDGh2R8EEbtUAbgNnkw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Informatica\",\r\n    \"presupuesto\": 23\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/empleado/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"empleado",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "empleado/findById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJlbXBsZWFkb3Mta3Rvci1hdXRoIiwic3ViIjoiQXV0aGVudGljYXRpb24iLCJpc3MiOiJlbXBsZWFkby1rdG9yIiwiZXhwIjoxNjc3MDE4NjM3LCJ1c2VySWQiOiJjMzNlOTc1MC0yYTA4LTQwYTAtODI1NC05NDRhZDRjNzQ3MWQiLCJlbWFpbCI6InBydWViYUBwcnVlYmEuY29tIiwidXNlcm5hbWUiOiJhZG1pbiJ9.gBCWJEs-WsY6A9a4a2Kd5q-Gl9E1jTBhu16qHafou58xMW_wr-2T5LGY-XAgwLMtwZQSDGh2R8EEbtUAbgNnkw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Informatica\",\r\n    \"presupuesto\": 23\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/empleado/71d64ccf-9351-4bc8-a4ef-995819070b41",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"empleado",
+						"71d64ccf-9351-4bc8-a4ef-995819070b41"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "departamento/findById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJlbXBsZWFkb3Mta3Rvci1hdXRoIiwic3ViIjoiQXV0aGVudGljYXRpb24iLCJpc3MiOiJlbXBsZWFkby1rdG9yIiwiZXhwIjoxNjc3MDI0MDUyLCJ1c2VySWQiOiI3ZDczNzE4NC1jMTU5LTQ5YzEtYTA4My1mNDJmZWNkMTJhNTMiLCJlbWFpbCI6InBydWViYUBwcnVlYmEuY29tIiwidXNlcm5hbWUiOiJhZG1pbiJ9.2I2ROWEWMk0Eq-y8F2YpUHVhJ6ao9kgJLdnA9ZnfCapsR_Ggbv7SsRe19pTQsaHPz5tDoggHXzmOKF4Wh39P4Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Actualizado\",\r\n    \"presupuesto\": 23\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/departamento/0fba63fd-b9aa-439e-85a4-58adf1c5321b",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"departamento",
+						"0fba63fd-b9aa-439e-85a4-58adf1c5321b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "departamento/delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJlbXBsZWFkb3Mta3Rvci1hdXRoIiwic3ViIjoiQXV0aGVudGljYXRpb24iLCJpc3MiOiJlbXBsZWFkby1rdG9yIiwiZXhwIjoxNjc3MDI0MDUyLCJ1c2VySWQiOiI3ZDczNzE4NC1jMTU5LTQ5YzEtYTA4My1mNDJmZWNkMTJhNTMiLCJlbWFpbCI6InBydWViYUBwcnVlYmEuY29tIiwidXNlcm5hbWUiOiJhZG1pbiJ9.2I2ROWEWMk0Eq-y8F2YpUHVhJ6ao9kgJLdnA9ZnfCapsR_Ggbv7SsRe19pTQsaHPz5tDoggHXzmOKF4Wh39P4Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Actualizado\",\r\n    \"presupuesto\": 23\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/departamento/0fba63fd-b9aa-439e-85a4-58adf1c5321b",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"departamento",
+						"0fba63fd-b9aa-439e-85a4-58adf1c5321b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "departamento/update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJlbXBsZWFkb3Mta3Rvci1hdXRoIiwic3ViIjoiQXV0aGVudGljYXRpb24iLCJpc3MiOiJlbXBsZWFkby1rdG9yIiwiZXhwIjoxNjc3MDI0MDUyLCJ1c2VySWQiOiI3ZDczNzE4NC1jMTU5LTQ5YzEtYTA4My1mNDJmZWNkMTJhNTMiLCJlbWFpbCI6InBydWViYUBwcnVlYmEuY29tIiwidXNlcm5hbWUiOiJhZG1pbiJ9.2I2ROWEWMk0Eq-y8F2YpUHVhJ6ao9kgJLdnA9ZnfCapsR_Ggbv7SsRe19pTQsaHPz5tDoggHXzmOKF4Wh39P4Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Actualizado\",\r\n    \"presupuesto\": 23\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/departamento/0fba63fd-b9aa-439e-85a4-58adf1c5321b",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"departamento",
+						"0fba63fd-b9aa-439e-85a4-58adf1c5321b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "empleado/update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJlbXBsZWFkb3Mta3Rvci1hdXRoIiwic3ViIjoiQXV0aGVudGljYXRpb24iLCJpc3MiOiJlbXBsZWFkby1rdG9yIiwiZXhwIjoxNjc3MDE4NjM3LCJ1c2VySWQiOiJjMzNlOTc1MC0yYTA4LTQwYTAtODI1NC05NDRhZDRjNzQ3MWQiLCJlbWFpbCI6InBydWViYUBwcnVlYmEuY29tIiwidXNlcm5hbWUiOiJhZG1pbiJ9.gBCWJEs-WsY6A9a4a2Kd5q-Gl9E1jTBhu16qHafou58xMW_wr-2T5LGY-XAgwLMtwZQSDGh2R8EEbtUAbgNnkw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Informatica\",\r\n    \"presupuesto\": 23\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/empleado/71d64ccf-9351-4bc8-a4ef-995819070b41",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"empleado",
+						"71d64ccf-9351-4bc8-a4ef-995819070b41"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "empleado/delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJlbXBsZWFkb3Mta3Rvci1hdXRoIiwic3ViIjoiQXV0aGVudGljYXRpb24iLCJpc3MiOiJlbXBsZWFkby1rdG9yIiwiZXhwIjoxNjc3MDE4NjM3LCJ1c2VySWQiOiJjMzNlOTc1MC0yYTA4LTQwYTAtODI1NC05NDRhZDRjNzQ3MWQiLCJlbWFpbCI6InBydWViYUBwcnVlYmEuY29tIiwidXNlcm5hbWUiOiJhZG1pbiJ9.gBCWJEs-WsY6A9a4a2Kd5q-Gl9E1jTBhu16qHafou58xMW_wr-2T5LGY-XAgwLMtwZQSDGh2R8EEbtUAbgNnkw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Informatica\",\r\n    \"presupuesto\": 23\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/empleado/71d64ccf-9351-4bc8-a4ef-995819070b41",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"empleado",
+						"71d64ccf-9351-4bc8-a4ef-995819070b41"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

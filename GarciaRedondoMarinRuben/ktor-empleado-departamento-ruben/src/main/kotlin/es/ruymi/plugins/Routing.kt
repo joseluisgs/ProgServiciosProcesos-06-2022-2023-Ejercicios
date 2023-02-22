@@ -1,0 +1,20 @@
+package es.ruymi.plugins
+
+import es.ruymi.routes.departamentoRoutes
+import es.ruymi.routes.empleadoRoutes
+import es.ruymi.routes.usersRoutes
+import io.ktor.server.routing.*
+import io.ktor.server.response.*
+import io.ktor.server.application.*
+
+fun Application.configureRouting() {
+    routing {
+        get("/") {
+            call.respondText("Hello World!")
+        }
+    }
+
+    usersRoutes()
+    empleadoRoutes()
+    departamentoRoutes()
+}
