@@ -1,0 +1,475 @@
+{
+	"info": {
+		"_postman_id": "e7f34bf3-1ee7-45fc-bc15-b80e0687ffd6",
+		"name": "Tests empleados",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25247259"
+	},
+	"item": [
+		{
+			"name": "testsEmpleados",
+			"item": [
+				{
+					"name": "register empleado",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Registro de pepe\", function(){",
+									"    pm.response.to.have.status(201)",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Pepe\",\n    \"surname\" : \"Pepez\",\n    \"email\" : \"pepe@mail.com\",\n    \"salary\" : 2000.0,\n    \"departamento\" : \"Sales\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "0.0.0.0:8080/empleados/register",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8080",
+							"path": [
+								"empleados",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all empleados",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Get all empleados\", function(){",
+									"    pm.response.to.have.status(200)",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "0.0.0.0:8080/empleados",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8080",
+							"path": [
+								"empleados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login admin error",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Admin login pero con correo mal\", function(){",
+									"    pm.response.to.have.status(400)",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"correo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "0.0.0.0:8080/empleados/login",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8080",
+							"path": [
+								"empleados",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login admin OK",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Admin login\", function(){",
+									"    pm.response.to.have.status(200)",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"moha@mail.com\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "0.0.0.0:8080/empleados/login",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8080",
+							"path": [
+								"empleados",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all empleados",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Get all empleados\", function(){",
+									"    pm.response.to.have.status(200)",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "0.0.0.0:8080/empleados",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8080",
+							"path": [
+								"empleados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all empleados delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Delete empleado manuel\", function(){",
+									"    pm.response.to.have.status(204)",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJlbXBsZWFkb3Mta3Rvci1hdXRoIiwic3ViIjoiU2VndXJpZGFkIiwiaXNzIjoiaW8ua3Rvci5zZXJ2ZXIuY29uZmlnLkhvY29uQXBwbGljYXRpb25Db25maWckSG9jb25BcHBsaWNhdGlvbkNvbmZpZ1ZhbHVlQDFlMzRjNjA3IiwiZXhwIjoxNjc3MDE2NzAyLCJlbWFpbCI6Im1vaGFAbWFpbC5jb20iLCJyb2wiOiJBRE1JTiJ9.rWV3sNpFDq4wATfCXqo8ZtjQY_3ieeT7p1-GGM9FtWHriuWVppQUYNNcSGPTEv7aBNcNNYBCNoow-VBjP9Ghrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "0.0.0.0:8080/empleados/52981ced-0391-4591-9c60-d90d94b89d51",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8080",
+							"path": [
+								"empleados",
+								"52981ced-0391-4591-9c60-d90d94b89d51"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin post empleado",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Admin contrata empleado\", function(){",
+									"    pm.response.to.have.status(201)",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJlbXBsZWFkb3Mta3Rvci1hdXRoIiwic3ViIjoiU2VndXJpZGFkIiwiaXNzIjoiaW8ua3Rvci5zZXJ2ZXIuY29uZmlnLkhvY29uQXBwbGljYXRpb25Db25maWckSG9jb25BcHBsaWNhdGlvbkNvbmZpZ1ZhbHVlQDFlMzRjNjA3IiwiZXhwIjoxNjc3MDE2NzAyLCJlbWFpbCI6Im1vaGFAbWFpbC5jb20iLCJyb2wiOiJBRE1JTiJ9.rWV3sNpFDq4wATfCXqo8ZtjQY_3ieeT7p1-GGM9FtWHriuWVppQUYNNcSGPTEv7aBNcNNYBCNoow-VBjP9Ghrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Ana\",\n    \"surname\" : \"Garcia\",\n    \"email\" : \"ana@mail.com\",\n    \"salary\" : 3000.0,\n    \"departamento\" : \"RRHH\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "0.0.0.0:8080/empleados",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8080",
+							"path": [
+								"empleados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all empleados Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Patch siendo admin\", function(){",
+									"    pm.response.to.have.status(200)",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"salary\" : 3500.0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "0.0.0.0:8080/empleados/2ab8f2d1-44de-4ea9-bfc3-718b2cb05cd6",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8080",
+							"path": [
+								"empleados",
+								"2ab8f2d1-44de-4ea9-bfc3-718b2cb05cd6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all empleados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "0.0.0.0:8080/empleados",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8080",
+							"path": [
+								"empleados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login pepe",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Login pepe\", function(){",
+									"    pm.response.to.have.status(200)",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"pepe@mail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "0.0.0.0:8080/empleados/login",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8080",
+							"path": [
+								"empleados",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pepe crea empleado error",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"pepe contrata a su primo y falla\", function(){",
+									"    pm.response.to.have.status(401)",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJlbXBsZWFkb3Mta3Rvci1hdXRoIiwic3ViIjoiU2VndXJpZGFkIiwiaXNzIjoiaW8ua3Rvci5zZXJ2ZXIuY29uZmlnLkhvY29uQXBwbGljYXRpb25Db25maWckSG9jb25BcHBsaWNhdGlvbkNvbmZpZ1ZhbHVlQDFlMzRjNjA3IiwiZXhwIjoxNjc3MDE3Mjk3LCJlbWFpbCI6InBlcGVAbWFpbC5jb20iLCJyb2wiOiJFTVBMRUFETyJ9.AucRDr3_8ZB26fbsqyjPZURmYOSaDUFs2dQVxKrQ9M3b9g20y3dVf863pFZJRFIgPzXgbMMSwBi2uOkTLiwXUg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Primo\",\n    \"surname\" : \"De pepe\",\n    \"email\" : \"primo@mail.com\",\n    \"salary\" : 10000.0,\n    \"departamento\" : \"Transporte\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "0.0.0.0:8080/empleados",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8080",
+							"path": [
+								"empleados"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
